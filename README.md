@@ -40,9 +40,10 @@ The playlist snapshot used for this comparison had 653 entries and 653 unique `t
 | teliatv.ee (Russian feed) | 14 |
 | magticom.ge (Russian channels) | 4 |
 | horizon.tv (Slovakia) | 1 |
-| **Unique IDs across all eight** | **338 / 653** |
+| programetv.ro | 1 |
+| **Unique IDs across all nine** | **339 / 653** |
 
-The combined map adds **107 IDs** beyond the original IptvX-only map. **315 IDs** had no exact match in those eight catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
+The combined map adds **108 IDs** beyond the original IptvX-only map. **314 IDs** had no exact match in those nine catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
 
 ## Repository files
 
