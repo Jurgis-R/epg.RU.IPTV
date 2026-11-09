@@ -9,6 +9,9 @@ on:
       - "channels.xml"
       - ".github/workflows/build-epg.yml"
       - "scripts/merge_external_epg.py"
+      - "coverage.csv"
+      - "additional-ids.txt"
+      - "README.md"
   push:
     branches:
       - main
