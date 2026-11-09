@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Exact tvg-id cross-match against iptv-org/languages/rus.m3u.
-  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge.
-  337 unique playlist IDs matched out of 653; 316 unmatched in the 2026-11-09 snapshot.
+  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge, 9tv.co.il.
+  338 unique playlist IDs matched out of 653; 315 unmatched in the 2026-11-09 snapshot.
   Repeated xmltv_id values from different source sites are intentional alternatives.
 -->
 <channels>
@@ -502,4 +502,5 @@
   <channel site="magticom.ge" site_id="171" lang="ru" xmltv_id="NickJr.ru@SD">Nick Jr.</channel>
   <channel site="magticom.ge" site_id="220" lang="ru" xmltv_id="PeretzInternational.ru@SD">Перец</channel>
   <channel site="magticom.ge" site_id="258" lang="ru" xmltv_id="Nauka.ru@SD">Наука 2.0</channel>
+  <channel site="9tv.co.il" site_id="#" lang="ru" xmltv_id="Channel9.il@SD">9 канал</channel>
 </channels>
