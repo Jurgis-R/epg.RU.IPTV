@@ -32,33 +32,21 @@ Repository files:
 - [additional-ids.txt](./additional-ids.txt) — additional exact IDs beyond the original iptvx catalogue.
 - [epg-url.txt](./epg-url.txt) — primary URL and additional feed candidates.
 
-## Smotrim
+## EPG.ONE public feeds
 
-The two supplied variants are:
-- `https://smotrim.uno/epg/epg.xml`
-- `https://smotrim.uno/epg/epg.xml.gz`
+EPG.ONE's public site lists these XMLTV feeds:
 
-The uncompressed `.xml` endpoint responded with `text/xml` when opened, but the web reader cannot parse XML payloads. A historical Jellyfin log from August 2024 for the gzip URL listed IDs such as `X2na2`, `Xmir`, and `Xru-tv`. These are not exact matches for target playlist IDs such as `2x2.ru@SD`, `Mir.ru@SD`, and `RUTV.ru@SD`. These examples are not an exhaustive current channel list.
+- `http://epg.one/epg.xml.gz` — full channel pack.
+- `http://epg.one/epg2.xml.gz` — full channel pack with an alternative logo set.
+- `http://epg.one/ru.xml.gz` and `http://epg.one/ru2.xml.gz` — Russian-language channel packs.
+- `http://epg.one/rupp.xml.gz` — build for Perfect Player and ProgTV.
+- `http://epg.one/epg.xml` and `http://epg.one/epg2.xml` — simplified, uncompressed current-day guides containing programme titles without descriptions.
 
-Therefore no exact Smotrim coverage count is claimed, and no speculative mappings were added to `channels.xml`.
+EPG.ONE states that its guide covers about a week backward and forward and that it combines multiple programme sources, using another source when a programme is missing from one.
 
-## EPG.ONE / former EPG it999
+These are provider descriptions, not a verified channel-ID match against this playlist. The exact XMLTV IDs in these feeds have not been extracted and cross-matched against all 653 target playlist IDs.
 
-The supplied old address:
-`http://epg.it999.ru/edem.xml`
-
-redirects to:
-`http://epg.one/edem.xml`
-
-EPG.ONE's own page identifies it as the new domain for EPG it999 and says old it999-domain links were scheduled to be disabled after 15 May 2024. It lists the following formats:
-- `http://epg.one/edem.xml` — simplified, uncompressed XMLTV for the current day; programme title only, no description.
-- `http://epg.one/edem.xml.gz` — compressed Edem feed.
-- `https://epg.one/ru2.xml.gz` and `https://epg.one/ru.xml.gz` — Russian-language channel packs.
-- `https://epg.one/epg.xml.gz` — full channel pack.
-
-EPG.ONE describes its full guide as using multiple programme sources and covering about a week forward and backward. Its own site also states that it uses fallback sources when a programme is missing from one source.
-
-The exact XMLTV IDs in these feeds have not been extracted and cross-matched against all 653 target playlist IDs here. Do not treat the provider's claim of broad coverage as proof that every playlist ID matches.
+Source: [EPG.ONE official feed page](https://epg.one/).
 
 ## Other public Russian EPG candidates
 
