@@ -1,0 +1,7 @@
+EPG/XMLTV URL for the Russian playlist:
+https://iptvx.one/epg/epg_noarch.xml.gz
+
+Playlist:
+https://iptv-org.github.io/iptv/languages/rus.m3u
+
+Guide source configured in iptv-org/epg: epg.iptvx.one
