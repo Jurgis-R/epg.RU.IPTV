@@ -2,7 +2,7 @@
 <!--
   Exact tvg-id cross-match against iptv-org/languages/rus.m3u.
   Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge.
-  336 unique playlist IDs matched out of 653; 317 unmatched in the 2026-11-09 snapshot.
+  337 unique playlist IDs matched out of 653; 316 unmatched in the 2026-11-09 snapshot.
   Repeated xmltv_id values from different source sites are intentional alternatives.
 -->
 <channels>
