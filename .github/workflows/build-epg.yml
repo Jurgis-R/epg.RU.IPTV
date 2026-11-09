@@ -5,6 +5,8 @@ on:
   schedule:
     - cron: "23 */12 * * *"
   push:
+    branches:
+      - main
     paths:
       - "channels.xml"
       - ".github/workflows/build-epg.yml"
@@ -105,6 +107,7 @@ jobs:
         run: gzip -9 -k public/epg.xml
 
       - name: Publish guide to data branch without external Actions
+        if: github.ref == 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
