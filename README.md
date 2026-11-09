@@ -28,7 +28,7 @@ The guide is not a static channel list: it contains actual `<channel>` and `<pro
 
 ## Exact channel-ID cross-check
 
-The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against five upstream channel catalogues:
+The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against seven upstream channel catalogues:
 
 | Source catalogue | Exact IDs found |
 |---|---:|
@@ -39,9 +39,9 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | cgates.lt | 4 |
 | teliatv.ee (Russian feed) | 21 |
 | magticom.ge (Russian channels) | 43 |
-| **Unique IDs across all five** | **336 / 653** |
+| **Unique IDs across all seven** | **337 / 653** |
 
-The combined map adds **105 IDs** beyond the original IptvX-only map. **317 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **106 IDs** beyond the original IptvX-only map. **316 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
 ## Repository files
 
