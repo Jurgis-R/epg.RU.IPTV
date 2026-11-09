@@ -104,3 +104,4 @@ STSInternational.ru@SD	CTC	magticom.ge
 NickJr.ru@SD	Nick Jr.	magticom.ge
 PeretzInternational.ru@SD	Перец	magticom.ge
 Nauka.ru@SD	Наука 2.0	magticom.ge
+FREEDOM.ua@SD	FREEDOM (1080p)	horizon.tv
