@@ -194,6 +194,7 @@ def main():
     GUIDE.parent.mkdir(parents=True, exist_ok=True)
     tree.write(GUIDE, encoding="utf-8", xml_declaration=True)
     still_missing = len(unmatched - set(selected))
+    report.extend("TARGET | " + target_id + " | " + status.replace(chr(92) + "t", " | ") for target_id, status in sorted(target_audit.items()))
     report.insert(0, f"UNMATCHED_AT_START\t{len(unmatched)}")
     report.insert(1, f"VERIFIED_CHANNELS_ADDED\t{added_channels}")
     report.insert(2, f"VERIFIED_PROGRAMMES_ADDED\t{added_programmes}")
