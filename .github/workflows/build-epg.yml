@@ -38,6 +38,27 @@ jobs:
         working-directory: epg-engine
         run: npm ci
 
+      - name: Patch Mail.ru scraper for current POST-only schedule endpoint
+        working-directory: epg-engine
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("sites/tv.mail.ru/tv.mail.ru.config.js")
+          source = path.read_text()
+          request_old = "  request: {\\n    cache: {"
+          request_new = "  request: {\\n    method: 'POST',\\n    cache: {"
+          fetch_old = "await axios[m](url, { headers })"
+          fetch_new = "await axios.post(url, {}, { headers })"
+          if request_old not in source:
+              raise SystemExit("Mail.ru request block changed; refusing an unverified patch")
+          if fetch_old not in source:
+              raise SystemExit("Mail.ru URL probe changed; refusing an unverified patch")
+          source = source.replace(request_old, request_new, 1)
+          source = source.replace(fetch_old, fetch_new, 1)
+          path.write_text(source)
+          print("Mail.ru scraper patched: POST request + POST URL probe")
+          PY
+
       - name: Generate XMLTV from mapped sources
         working-directory: epg-engine
         run: |
