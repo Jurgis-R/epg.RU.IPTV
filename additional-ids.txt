@@ -104,4 +104,3 @@ STSInternational.ru@SD	CTC	magticom.ge
 NickJr.ru@SD	Nick Jr.	magticom.ge
 PeretzInternational.ru@SD	Перец	magticom.ge
 Nauka.ru@SD	Наука 2.0	magticom.ge
-Channel9.il@SD	Channel 9 (Israel) (1080p)	9tv.co.il

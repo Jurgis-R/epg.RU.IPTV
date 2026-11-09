@@ -28,7 +28,7 @@ The guide is not a static channel list: it contains actual `<channel>` and `<pro
 
 ## Exact channel-ID cross-check
 
-The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against eight upstream channel catalogues:
+The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against seven upstream channel catalogues:
 
 | Source catalogue | Exact IDs found |
 |---|---:|
@@ -39,10 +39,9 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | cgates.lt | 4 |
 | teliatv.ee (Russian feed) | 21 |
 | magticom.ge (Russian channels) | 43 |
-| 9tv.co.il (Russian-language Israeli channel) | 1 |
-| **Unique IDs across all eight** | **338 / 653** |
+| **Unique IDs across all seven** | **337 / 653** |
 
-The combined map adds **107 IDs** beyond the original IptvX-only map. **315 IDs** had no exact match in those eight catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **106 IDs** beyond the original IptvX-only map. **316 IDs** had no exact match in those seven catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
 ## Repository files
 
@@ -68,4 +67,3 @@ EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its g
 - [CGates scraper](https://github.com/iptv-org/epg/tree/master/sites/cgates.lt)
 - [Telia TV Estonia Russian feed](https://github.com/iptv-org/epg/tree/master/sites/teliatv.ee)
 - [Magticom Georgia](https://github.com/iptv-org/epg/tree/master/sites/magticom.ge)
-- [9 канал / Israel](https://github.com/iptv-org/epg/tree/master/sites/9tv.co.il) — official Russian-language schedule
