@@ -1,30 +1,55 @@
 # Russian IPTV EPG
 
-EPG for the playlist:
+Target playlist:
 https://iptv-org.github.io/iptv/languages/rus.m3u
 
-## Main XMLTV URL
+## Primary XMLTV URL
 
 `https://iptvx.one/epg/epg_noarch.xml.gz`
 
-This URL is configured by the `epg.iptvx.one` scraper in [iptv-org/epg](https://github.com/iptv-org/epg/blob/master/sites/epg.iptvx.one/epg.iptvx.one.config.js). The scraper config declares a 2-day guide and labels its channel catalogue as Russian (`lang: ru`).
+This is the URL configured by the `epg.iptvx.one` scraper in `iptv-org/epg`. The scraper configuration specifies a 2-day guide; its channel catalogue is Russian-language. The endpoint returned an HTTP response with gzip content type during checking. The web reader cannot parse gzip payloads, so I did not inspect the programme records themselves.
 
-Add the URL above as the EPG/XMLTV source in the TV box. Keep the M3U playlist URL separate.
+Use the primary URL as the XMLTV source in your TV box. Keep the M3U playlist unchanged.
 
-## Channel ID matching
+## Exact channel-ID cross-check
 
-[channels.xml](./channels.xml) contains exact `tvg-id` matches between the playlist and the iptv-org/epg `epg.iptvx.one` channel catalogue.
+The current playlist has 653 entries and 653 unique `tvg-id` values. I compared them against five channel catalogues in `iptv-org/epg`:
 
-- Playlist entries inspected: 653
-- Exact ID mappings included: 231
-- Playlist entries without an exact mapping: 422
+| Source catalogue | Exact IDs found |
+|---|---:|
+| epg.iptvx.one | 231 |
+| tv.mail.ru | 229 |
+| ctc.ru | 1 |
+| galamtv.kz | 11 |
+| cgates.lt | 4 |
+| **Unique IDs across all five** | **319 / 653** |
 
-The TV box must match each playlist `tvg-id` to the same XMLTV channel ID. This mapping file is a reference; it is not itself the programme guide.
+The combined match adds **88 IDs** beyond the previous iptvx-only map. **334 IDs remain unmatched** in these five catalogues.
 
-## Upstream sources
+Repository files:
+- [channels.xml](./channels.xml) — upstream source/site IDs mapped to your playlist's exact `tvg-id` values.
+- [coverage.csv](./coverage.csv) — all playlist entries and the source catalogues where exact matches exist.
+- [additional-ids.txt](./additional-ids.txt) — the additional exact IDs found beyond the original iptvx catalogue.
+- [epg-url.txt](./epg-url.txt) — primary URL and other public Russian EPG candidates.
+
+## Other public Russian EPG sources found
+
+These are alternatives, not merged into the primary feed. Their exact `tvg-id` coverage against this playlist was not established:
+
+- EPG.ONE: `https://epg.one/ru2.xml.gz` and `https://epg.one/ru.xml.gz`. The provider describes multi-source schedule collection and roughly one week of guide data.
+- IPTV-EPG.org Russia: `https://iptv-epg.org/files/epg-ru.xml`. Its public guide index lists 198 Russia channels.
+- TeleGuide: `https://www.teleguide.info/download/new3/xmltv.xml.gz`.
+- IptvX full guide: `https://iptvx.one/epg/epg.xml.gz`.
+
+The guide index for IPTV-EPG.org was accessible and lists the Russia feed. The XML endpoint returned XML content type, but its records could not be parsed by the web reader. Gzip endpoints from other providers could not all be independently downloaded and inspected here. No unverified source is presented as tested.
+
+## Upstream catalogues
 
 - Playlist: https://github.com/iptv-org/iptv/blob/gh-pages/languages/rus.m3u
-- EPG scraper configuration: https://github.com/iptv-org/epg/blob/master/sites/epg.iptvx.one/epg.iptvx.one.config.js
-- EPG channel catalogue: https://github.com/iptv-org/epg/blob/master/sites/epg.iptvx.one/epg.iptvx.one.channels.xml
+- IptvX scraper: https://github.com/iptv-org/epg/tree/master/sites/epg.iptvx.one
+- Mail scraper: https://github.com/iptv-org/epg/tree/master/sites/tv.mail.ru
+- CTC scraper: https://github.com/iptv-org/epg/tree/master/sites/ctc.ru
+- GalamTV scraper: https://github.com/iptv-org/epg/tree/master/sites/galamtv.kz
+- CGates scraper: https://github.com/iptv-org/epg/tree/master/sites/cgates.lt
 
-A live HTTP download test of the guide endpoint was not possible in this run, so endpoint availability is not independently confirmed.
+`channels.xml` is a channel-mapping catalogue, not a programme guide. The primary XMLTV feed is still hosted by IptvX.
