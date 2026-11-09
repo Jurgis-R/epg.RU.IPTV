@@ -28,7 +28,7 @@ The guide is not a static channel list: it contains actual `<channel>` and `<pro
 
 ## Exact channel-ID cross-check
 
-The playlist snapshot used for this comparison had 653 entries and 653 unique `tvg-id` values. These were compared against eight upstream channel catalogues:
+The playlist snapshot used for this comparison had 653 entries and 653 unique `tvg-id` values. These were compared against nine upstream channel catalogues:
 
 | Source catalogue | Exact playlist IDs mapped |
 |---|---:|
@@ -41,11 +41,9 @@ The playlist snapshot used for this comparison had 653 entries and 653 unique `t
 | magticom.ge (Russian channels) | 4 |
 | horizon.tv (Slovakia) | 1 |
 | programetv.ro | 1 |
-| musor.tv | 1 |
-| tvplus.com.tr | 1 |
-| **Unique IDs across all eleven** | **339 / 653** |
+| **Unique IDs across all nine** | **339 / 653** |
 
-The combined map adds **108 IDs** beyond the original IptvX-only map. **314 IDs** had no exact match in those eleven catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
+The combined map adds **108 IDs** beyond the original IptvX-only map. **314 IDs** had no exact match in those nine catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
 
 ## Repository files
 
@@ -72,3 +70,4 @@ EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its g
 - [Telia TV Estonia Russian feed](https://github.com/iptv-org/epg/tree/master/sites/teliatv.ee)
 - [Magticom Georgia](https://github.com/iptv-org/epg/tree/master/sites/magticom.ge)
 - [Horizon TV Slovakia](https://github.com/iptv-org/epg/tree/master/sites/horizon.tv)
+- [Programetv Romania](https://github.com/iptv-org/epg/tree/master/sites/programetv.ro)
