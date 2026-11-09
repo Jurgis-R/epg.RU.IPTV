@@ -42,6 +42,7 @@ Komedia.ru@SD	Komedia (576p)	tv.mail.ru
 Komediynoe.ru@HD	Komediynoe HD (1080p)	tv.mail.ru
 KTK.kz@SD	KTK (576p)	galamtv.kz
 LuxeTV.lu@SD	Luxe TV (1080p)	tv.mail.ru
+LoveNature.ca@SD	Love Nature (1080p)	programetv.ro
 Mir.ru@SD	Mir (720p)	tv.mail.ru, galamtv.kz
 MosfilmGoldCollection.ru@SD	Mosfilm Gold Collection (576p)	tv.mail.ru
 Moskva24.ru@SD	Moskva 24 (1080p)	tv.mail.ru
