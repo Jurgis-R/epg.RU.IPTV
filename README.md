@@ -42,7 +42,7 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | 9tv.co.il (Russian-language Israeli channel) | 1 |
 | **Unique IDs across all eight** | **338 / 653** |
 
-The combined map adds **107 IDs** beyond the original IptvX-only map. **315 IDs** had no exact match in those seven catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **107 IDs** beyond the original IptvX-only map. **315 IDs** had no exact match in those eight catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
 ## Repository files
 
