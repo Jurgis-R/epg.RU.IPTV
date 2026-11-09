@@ -1,14 +1,25 @@
-PRIMARY XMLTV EPG — use this first:
+PRIMARY XMLTV EPG — current default:
 https://iptvx.one/epg/epg_noarch.xml.gz
 
 TARGET M3U:
 https://iptv-org.github.io/iptv/languages/rus.m3u
 
-OTHER PUBLIC RUSSIAN EPG CANDIDATES — test separately if a channel has no guide:
+ADDITIONAL RUSSIAN EPG CANDIDATES:
+Smotrim:
+https://smotrim.uno/epg/epg.xml.gz
+
+EPG.ONE (the successor domain for EPG it999):
+https://epg.one/edem.xml.gz
 https://epg.one/ru2.xml.gz
 https://epg.one/ru.xml.gz
+https://epg.one/epg.xml.gz
+
+OTHER PUBLIC RUSSIAN EPG CANDIDATES:
 https://iptv-epg.org/files/epg-ru.xml
 https://www.teleguide.info/download/new3/xmltv.xml.gz
 https://iptvx.one/epg/epg.xml.gz
 
-Exact tvg-id coverage of the alternatives has not been verified against the target playlist.
+Important:
+- The old http://epg.it999.ru/edem.xml.gz address is legacy. EPG.ONE states that it replaced the it999 domain and that old it999 links were scheduled for shutdown after 15 May 2024. Use EPG.ONE URLs instead.
+- Smotrim XMLTV channel IDs have not been exhaustively extracted and cross-matched against this playlist. Do not assume exact tvg-id compatibility.
+- Alternative feed coverage is not yet proven by a full XMLTV parse.
