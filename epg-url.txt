@@ -1,7 +1,14 @@
-EPG/XMLTV URL for the Russian playlist:
+PRIMARY XMLTV EPG — use this first:
 https://iptvx.one/epg/epg_noarch.xml.gz
 
-Playlist:
+TARGET M3U:
 https://iptv-org.github.io/iptv/languages/rus.m3u
 
-Guide source configured in iptv-org/epg: epg.iptvx.one
+OTHER PUBLIC RUSSIAN EPG CANDIDATES — test separately if a channel has no guide:
+https://epg.one/ru2.xml.gz
+https://epg.one/ru.xml.gz
+https://iptv-epg.org/files/epg-ru.xml
+https://www.teleguide.info/download/new3/xmltv.xml.gz
+https://iptvx.one/epg/epg.xml.gz
+
+Exact tvg-id coverage of the alternatives has not been verified against the target playlist.
