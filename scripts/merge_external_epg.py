@@ -25,8 +25,8 @@ SOURCES = [
     ("IPTV-EPG Belarus", "https://iptv-epg.org/files/epg-by.xml", False),
     ("IPTV-EPG Armenia", "https://iptv-epg.org/files/epg-am.xml", False),
     ("IPTV-EPG Israel", "https://iptv-epg.org/files/epg-il.xml", False),
-    ("Smotrim EPG Lite", "https://smotrim.uno/epg/epg-lite.xml", False),
-    ("Smotrim EPG Full", "https://smotrim.uno/epg/epg.xml", False),
+    ("Smotrim EPG Lite", "https://smotrim.uno/epg/epg-lite.xml.gz", True),
+    ("Smotrim EPG Full", "https://smotrim.uno/epg/epg.xml.gz", True),
 ]
 
 # Confirmed catalogue-name equivalents. The programme test below is still mandatory.
