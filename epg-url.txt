@@ -4,12 +4,14 @@ https://iptvx.one/epg/epg_noarch.xml.gz
 TARGET M3U:
 https://iptv-org.github.io/iptv/languages/rus.m3u
 
-ADDITIONAL RUSSIAN EPG CANDIDATES:
-Smotrim:
+SMOTRIM — uncompressed XMLTV endpoint supplied for checking:
+https://smotrim.uno/epg/epg.xml
+Compressed variant:
 https://smotrim.uno/epg/epg.xml.gz
 
-EPG.ONE (the successor domain for EPG it999):
-https://epg.one/edem.xml.gz
+EPG.ONE — successor domain for EPG it999:
+http://epg.one/edem.xml
+http://epg.one/edem.xml.gz
 https://epg.one/ru2.xml.gz
 https://epg.one/ru.xml.gz
 https://epg.one/epg.xml.gz
@@ -19,7 +21,7 @@ https://iptv-epg.org/files/epg-ru.xml
 https://www.teleguide.info/download/new3/xmltv.xml.gz
 https://iptvx.one/epg/epg.xml.gz
 
-Important:
-- The old http://epg.it999.ru/edem.xml.gz address is legacy. EPG.ONE states that it replaced the it999 domain and that old it999 links were scheduled for shutdown after 15 May 2024. Use EPG.ONE URLs instead.
-- Smotrim XMLTV channel IDs have not been exhaustively extracted and cross-matched against this playlist. Do not assume exact tvg-id compatibility.
-- Alternative feed coverage is not yet proven by a full XMLTV parse.
+Format notes:
+- EPG.ONE .xml endpoints are simplified, uncompressed, current-day guides with programme titles only (no descriptions), according to the provider.
+- The old epg.it999.ru/edem.xml address redirects to epg.one/edem.xml.
+- Exact tvg-id overlap for the Smotrim and EPG.ONE feeds has not yet been exhaustively parsed against the target M3U. Do not assume exact compatibility.
