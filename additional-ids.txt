@@ -1,0 +1,88 @@
+360.ru@SD	360° (1080p)	tv.mail.ru
+red.ru@HD	.red HD (1080p)	tv.mail.ru
+AlmatyTV.kz@SD	Almaty TV (576p)	galamtv.kz
+AmediaHit.ru@SD	Amedia Hit (1080p)	tv.mail.ru
+AmediaPremium.ru@SD	Amedia Premium (720p)	tv.mail.ru
+AngelTV.in@Russian	Angel TV Russian (720p)	tv.mail.ru
+Belarus24.by@SD	Belarus-24 (576p)	tv.mail.ru
+Blokbaster.ru@HD	Blokbaster HD (1080p)	tv.mail.ru
+Bollywood.ru@HD	Bollywood HD (576p)	tv.mail.ru
+BRIDGE.ru@SD	BRIDGE (576p)	tv.mail.ru
+BRIDGEClassic.ru@SD	BRIDGE Classic (576p)	tv.mail.ru
+BRIDGEDeluxe.ru@HD	BRIDGE Deluxe HD (576p)	tv.mail.ru
+BRIDGEHits.ru@SD	BRIDGE Hits (576p)	tv.mail.ru
+BRIDGERock.ru@SD	BRIDGE Rock (576p)	tv.mail.ru
+CGTNRussian.cn@SD	CGTN Russian (1080p)	tv.mail.ru
+ChannelOne.ru@HD	Channel One (Russia) HD (720p)	tv.mail.ru
+Che.ru@SD	Che! (576p)	tv.mail.ru
+CurrentTimeTV.cz@SD	Current Time TV (1080p)	cgates.lt
+DaVinci.ru@SD	Da Vinci (576p)	tv.mail.ru
+Dikayaokhota.ru@HD	Dikaya okhota HD (1080p)	tv.mail.ru
+Dikayarybalka.ru@HD	Dikaya rybalka HD (1080p)	tv.mail.ru
+Dikij.ru@SD	Dikij (576p)	tv.mail.ru
+DomkinoPremium.ru@HD	Dom kino Premium HD (1080p)	tv.mail.ru
+Dorama.ru@HD	Dorama HD (1080p)	tv.mail.ru
+DumaTV.ru@SD	Duma TV (720p)	tv.mail.ru
+EuropaPlusTV.ru@SD	Europa Plus TV (1080p)	tv.mail.ru
+Evrokino.ru@HD	Evrokino HD (1080p)	tv.mail.ru
+ExtremeSportsChannel.ru@SD	Extreme Sports Channel (576p)	tv.mail.ru
+FAN.ru@SD	FAN (1080p)	tv.mail.ru
+FeniksplusKino.ru@SD	Feniks plus Kino (576p)	tv.mail.ru
+FilmUADrama.ua@SD	FilmUADrama (1080p)	cgates.lt
+GulliGirl.ru@SD	Gulli Girl (720p)	tv.mail.ru
+Hit.ru@HD	Hit HD (1080p)	tv.mail.ru
+IllusionPlus.ru@SD	Illusion+ (576p)	tv.mail.ru
+JibekJoly.kz@SD	Jibek Joly (576p)	galamtv.kz
+KHL.ru@SD	KHL (720p)	tv.mail.ru
+KinoTV.ru@SD	Kino TV (720p)	tv.mail.ru
+KinoTV.ru@HD	Kino TV HD (1080p)	tv.mail.ru
+Kinopokaz.ru@SD	Kinopokaz (576p)	tv.mail.ru
+Kinopremyera.ru@HD	Kinopremyera HD (1080p)	tv.mail.ru
+Komedia.ru@SD	Komedia (576p)	tv.mail.ru
+Komediynoe.ru@HD	Komediynoe HD (1080p)	tv.mail.ru
+KTK.kz@SD	KTK (576p)	galamtv.kz
+LuxeTV.lu@SD	Luxe TV (1080p)	tv.mail.ru
+Mir.ru@SD	Mir (720p)	tv.mail.ru, galamtv.kz
+MosfilmGoldCollection.ru@SD	Mosfilm Gold Collection (576p)	tv.mail.ru
+Moskva24.ru@SD	Moskva 24 (1080p)	tv.mail.ru
+MoskvaDoveriye.ru@SD	Moskva. Doveriye (576p)	tv.mail.ru
+Moyastikhiya.ru@HD	Moya stikhiya HD (1080p)	tv.mail.ru
+MyZenTV.fr@SD	MyZen TV (1080p)	tv.mail.ru
+Nano.ru@HD	Nano HD (1080p)	tv.mail.ru
+NashKinopokaz.ru@HD	Nash Kinopokaz HD (576p)	tv.mail.ru
+Nashemuzhskoe.ru@HD	Nashe muzhskoe HD (1080p)	tv.mail.ru
+NTV.ru@HD	NTV (Russia) HD (1080p)	tv.mail.ru
+Ohotnikirybolov.ru@HD	Ohotnik i rybolov HD (1080p)	tv.mail.ru
+Ostrosyuzhetnoye.ru@HD	Ostrosyuzhetnoye HD (1080p)	tv.mail.ru
+OTR.ru@SD	OTR (576p)	tv.mail.ru
+Premialnoe.ru@HD	Premialnoe HD (1080p)	tv.mail.ru
+Priklyucheniya.ru@HD	Priklyucheniya HD (1080p)	tv.mail.ru
+RBKTV.ru@SD	RBK-TV (576p)	tv.mail.ru
+RTDocumentary.ru@Russian	RT Documentary Russian (1080p)	tv.mail.ru
+RTGTV.ru@HD	RTG TV HD (1080p)	tv.mail.ru
+Russia1.ru@SD	Russia-1 (1080p)	tv.mail.ru
+Russia1.ru@HD	Russia-1 HD (1080p)	tv.mail.ru
+Russia24.ru@SD	Russia-24 (1080p)	tv.mail.ru
+RussiaK.ru@SD	Russia-K (576p)	tv.mail.ru
+Rybolov.ru@SD	Rybolov (576p)	tv.mail.ru
+ShansonTV.ru@SD	Shanson TV SD (576p)	tv.mail.ru
+Shokiruyushchee.ru@HD	Shokiruyushchee HD (1080p)	tv.mail.ru
+Solnce.ru@SD	Solnce (576p)	tv.mail.ru
+SONGTVRussia.ru@SD	SONGTV Russia	tv.mail.ru
+StarCinema.ru@SD	Star Cinema	tv.mail.ru
+StarFamily.ru@SD	Star Family (1080p)	tv.mail.ru, cgates.lt
+STSkids.ru@SD	STS kids (1080p)	tv.mail.ru
+TDK42.kz@SD	TDK 42	galamtv.kz
+Teleputeshestviya.ru@SD	Teleputeshestviya (576p)	tv.mail.ru
+TERRA.ru@SD	TERRA (720p)	tv.mail.ru
+TNT.ru@HD	TNT (Russia) HD (1080p)	tv.mail.ru
+TNVTatarstan.ru@SD	TNV-Tatarstan (720p)	tv.mail.ru
+TochkaTV.ru@SD	Tochka TV (576p)	tv.mail.ru
+Tonus.ru@SD	Tonus (576p)	tv.mail.ru
+TravelPlusAdventure.ru@HD	Travel+Adventure HD (1080p)	tv.mail.ru
+TVBRICSRussian.ru@SD	TV BRICS Russian (1080p)	tv.mail.ru
+TV3.ru@SD	TV-3 (576p)	tv.mail.ru
+Vmirezhivotnykh.ru@SD	V mire zhivotnykh (1080p)	tv.mail.ru
+vijuPlusSport.ru@HD	viju+ Sport HD (1080p)	tv.mail.ru
+Zhivayapriroda.ru@HD	Zhivaya priroda HD (1080p)	tv.mail.ru
+Zhivi.ru@SD	Zhivi! (1080p)	tv.mail.ru
