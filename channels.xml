@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Exact tvg-id cross-match against iptv-org/languages/rus.m3u.
-  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt.
-  319 unique playlist IDs matched out of 653; 334 unmatched.
+  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge.
+  336 unique playlist IDs matched out of 653; 317 unmatched in the 2026-11-09 snapshot.
   Repeated xmltv_id values from different source sites are intentional alternatives.
 -->
 <channels>
@@ -484,4 +484,22 @@
   <channel site="cgates.lt" site_id="kidzone-tv" lang="en" xmltv_id="KidZoneMax.ee@SD">Kidzone Max</channel>
   <channel site="cgates.lt" site_id="nastojashcheje-vremya" lang="lt" xmltv_id="CurrentTimeTV.cz@SD">Nastojashcheje Vremya</channel>
   <channel site="cgates.lt" site_id="star-family" lang="ru" xmltv_id="StarFamily.ru@SD">Star Family</channel>
+  <channel site="teliatv.ee" site_id="ru#26" lang="ru" xmltv_id="DiscoveryChannel.ru@SD">Discovery Channel</channel>
+  <channel site="teliatv.ee" site_id="ru#31" lang="ru" xmltv_id="AnimalPlanet.ru@SD">Animal Planet</channel>
+  <channel site="teliatv.ee" site_id="ru#32" lang="ru" xmltv_id="InvestigationDiscovery.ru@SD">ID</channel>
+  <channel site="teliatv.ee" site_id="ru#35" lang="ru" xmltv_id="Eurosport1.fr@Russia">Eurosport</channel>
+  <channel site="teliatv.ee" site_id="ru#51" lang="ru" xmltv_id="Eurosport2.fr@Russia">Eurosport 2</channel>
+  <channel site="teliatv.ee" site_id="ru#57" lang="ru" xmltv_id="CartoonitoCEE.uk@SD">Cartoonito</channel>
+  <channel site="teliatv.ee" site_id="ru#58" lang="ru" xmltv_id="Nickelodeon.ru@SD">Nickelodeon</channel>
+  <channel site="teliatv.ee" site_id="ru#77" lang="ru" xmltv_id="Fox.ru@SD">Fox</channel>
+  <channel site="teliatv.ee" site_id="ru#105" lang="ru" xmltv_id="FoxLife.ru@SD">Fox Life</channel>
+  <channel site="teliatv.ee" site_id="ru#220" lang="ru" xmltv_id="LifeTV.ee@SD">LIFE TV</channel>
+  <channel site="teliatv.ee" site_id="ru#261" lang="ru" xmltv_id="TBNBaltia.ee@SD">TBN Baltia</channel>
+  <channel site="teliatv.ee" site_id="ru#823" lang="ru" xmltv_id="TLC.ru@SD">TLC</channel>
+  <channel site="teliatv.ee" site_id="ru#1252" lang="ru" xmltv_id="ETVPlus.ee@SD">ETV+</channel>
+  <channel site="teliatv.ee" site_id="ru#1286" lang="ru" xmltv_id="EuronewsRussian.fr@SD">Euronews Rus</channel>
+  <channel site="magticom.ge" site_id="65" lang="ru" xmltv_id="STSInternational.ru@SD">CTC</channel>
+  <channel site="magticom.ge" site_id="171" lang="ru" xmltv_id="NickJr.ru@SD">Nick Jr.</channel>
+  <channel site="magticom.ge" site_id="220" lang="ru" xmltv_id="PeretzInternational.ru@SD">Перец</channel>
+  <channel site="magticom.ge" site_id="258" lang="ru" xmltv_id="Nauka.ru@SD">Наука 2.0</channel>
 </channels>
