@@ -1,19 +1,34 @@
 # Russian IPTV EPG
 
-Target playlist:
+This repository builds a playlist-matched XMLTV guide for:
+
 https://iptv-org.github.io/iptv/languages/rus.m3u
 
-## Primary XMLTV URL
+## TV-box EPG URL
 
-`https://iptvx.one/epg/epg_noarch.xml.gz`
+Use this URL in the TV box after the first successful GitHub Actions build:
 
-This remains the primary URL because it is directly configured by the `epg.iptvx.one` scraper in `iptv-org/epg`. The scraper configuration specifies a 2-day guide. The endpoint returned a gzip response during checking, but the programme records could not be parsed in this environment.
+`https://raw.githubusercontent.com/Jurgis-R/epg.RU.IPTV/data/epg.xml.gz`
 
-Use the primary URL as the XMLTV source in your TV box. Keep the M3U playlist unchanged.
+Uncompressed alternative:
 
-## Exact channel-ID cross-check already completed
+`https://raw.githubusercontent.com/Jurgis-R/epg.RU.IPTV/data/epg.xml`
 
-The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against five channel catalogues in `iptv-org/epg`:
+The `data` branch is generated automatically. The guide is rebuilt every 12 hours and can also be started manually from the repository's Actions tab.
+
+## How the guide is built
+
+- Uses the official [iptv-org/epg grabber](https://github.com/iptv-org/epg).
+- Uses [channels.xml](./channels.xml) as the custom channel map. Its `site_id` values identify channels at the upstream EPG sources; its `xmltv_id` values are the exact IDs used by the target M3U.
+- Collects programme schedules from the mapped sources, then emits XMLTV channel and programme records under the playlist IDs.
+- Validates the generated guide against the current playlist before publishing. A build with too few matching channels or programme records is rejected.
+- Publishes both plain XML and gzip XMLTV to the `data` branch.
+
+The guide is not a static channel list: it contains actual `<channel>` and `<programme>` records. The source coverage depends on the upstream providers and their current availability.
+
+## Exact channel-ID cross-check
+
+The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against five upstream channel catalogues:
 
 | Source catalogue | Exact IDs found |
 |---|---:|
@@ -24,45 +39,27 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | cgates.lt | 4 |
 | **Unique IDs across all five** | **319 / 653** |
 
-The combined match adds **88 IDs** beyond the original iptvx-only map. **334 IDs remain unmatched** in those five catalogues.
+The combined map adds **88 IDs** beyond the original IptvX-only map. **334 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
-Repository files:
-- [channels.xml](./channels.xml) — upstream source/site IDs mapped to exact playlist `tvg-id` values.
-- [coverage.csv](./coverage.csv) — all playlist entries and source catalogues with exact matches.
-- [additional-ids.txt](./additional-ids.txt) — additional exact IDs beyond the original iptvx catalogue.
-- [epg-url.txt](./epg-url.txt) — primary URL and additional feed candidates.
+## Repository files
 
-## EPG.ONE public feeds
+- [channels.xml](./channels.xml) — upstream source/site IDs mapped to playlist `tvg-id` values.
+- [coverage.csv](./coverage.csv) — playlist entries and source catalogues with exact matches.
+- [additional-ids.txt](./additional-ids.txt) — additional exact IDs beyond the original IptvX catalogue.
+- [epg-url.txt](./epg-url.txt) — TV-box feed URLs.
+- [.github/workflows/build-epg.yml](./.github/workflows/build-epg.yml) — scheduled XMLTV build and publishing workflow.
 
-EPG.ONE's public site lists these XMLTV feeds:
+## Public source information
 
-- `http://epg.one/epg.xml.gz` — full channel pack.
-- `http://epg.one/epg2.xml.gz` — full channel pack with an alternative logo set.
-- `http://epg.one/ru.xml.gz` and `http://epg.one/ru2.xml.gz` — Russian-language channel packs.
-- `http://epg.one/rupp.xml.gz` — build for Perfect Player and ProgTV.
-- `http://epg.one/epg.xml` and `http://epg.one/epg2.xml` — simplified, uncompressed current-day guides containing programme titles without descriptions.
+The upstream [iptv-org/epg project](https://github.com/iptv-org/epg) supports custom channel mapping files and generates XMLTV guides from configured source sites. Its [contribution guide](https://github.com/iptv-org/epg/blob/master/CONTRIBUTING.md) explains that the XMLTV channel ID must match the playlist/database channel ID for programme data to link correctly.
 
-EPG.ONE states that its guide covers about a week backward and forward and that it combines multiple programme sources, using another source when a programme is missing from one.
+EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its guide coverage and source fallback on its [official site](https://epg.one/). Those external feeds are not used as the output URL for this repository.
 
-These are provider descriptions, not a verified channel-ID match against this playlist. The exact XMLTV IDs in these feeds have not been extracted and cross-matched against all 653 target playlist IDs.
+## Upstream source catalogues
 
-Source: [EPG.ONE official feed page](https://epg.one/).
-
-## Other public Russian EPG candidates
-
-- IPTV-EPG.org Russia: `https://iptv-epg.org/files/epg-ru.xml`
-- TeleGuide: `https://www.teleguide.info/download/new3/xmltv.xml.gz`
-- IptvX full guide: `https://iptvx.one/epg/epg.xml.gz`
-
-Their exact `tvg-id` coverage against this playlist has not been established here.
-
-## Upstream catalogues
-
-- Playlist: https://github.com/iptv-org/iptv/blob/gh-pages/languages/rus.m3u
-- IptvX scraper: https://github.com/iptv-org/epg/tree/master/sites/epg.iptvx.one
-- Mail scraper: https://github.com/iptv-org/epg/tree/master/sites/tv.mail.ru
-- CTC scraper: https://github.com/iptv-org/epg/tree/master/sites/ctc.ru
-- GalamTV scraper: https://github.com/iptv-org/epg/tree/master/sites/galamtv.kz
-- CGates scraper: https://github.com/iptv-org/epg/tree/master/sites/cgates.lt
-
-`channels.xml` is a channel-mapping catalogue, not a programme guide. The primary XMLTV feed is still hosted by IptvX. No merged XMLTV file is generated or hosted by this repository.
+- [Target playlist](https://github.com/iptv-org/iptv/blob/gh-pages/languages/rus.m3u)
+- [IptvX scraper](https://github.com/iptv-org/epg/tree/master/sites/epg.iptvx.one)
+- [Mail scraper](https://github.com/iptv-org/epg/tree/master/sites/tv.mail.ru)
+- [CTC scraper](https://github.com/iptv-org/epg/tree/master/sites/ctc.ru)
+- [GalamTV scraper](https://github.com/iptv-org/epg/tree/master/sites/galamtv.kz)
+- [CGates scraper](https://github.com/iptv-org/epg/tree/master/sites/cgates.lt)
