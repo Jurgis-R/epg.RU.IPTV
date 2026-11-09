@@ -37,9 +37,11 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | ctc.ru | 1 |
 | galamtv.kz | 11 |
 | cgates.lt | 4 |
-| **Unique IDs across all five** | **319 / 653** |
+| teliatv.ee (Russian feed) | 21 |
+| magticom.ge (Russian channels) | 43 |
+| **Unique IDs across all five** | **336 / 653** |
 
-The combined map adds **88 IDs** beyond the original IptvX-only map. **334 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **105 IDs** beyond the original IptvX-only map. **317 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
 ## Repository files
 
@@ -63,3 +65,5 @@ EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its g
 - [CTC scraper](https://github.com/iptv-org/epg/tree/master/sites/ctc.ru)
 - [GalamTV scraper](https://github.com/iptv-org/epg/tree/master/sites/galamtv.kz)
 - [CGates scraper](https://github.com/iptv-org/epg/tree/master/sites/cgates.lt)
+- [Telia TV Estonia Russian feed](https://github.com/iptv-org/epg/tree/master/sites/teliatv.ee)
+- [Magticom Georgia](https://github.com/iptv-org/epg/tree/master/sites/magticom.ge)
