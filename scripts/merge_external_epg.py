@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""Merge only externally verified XMLTV programme records into the Russian guide.
+"""Merge externally verified XMLTV records using exact playlist/XMLTV IDs only.
 
-Exact XMLTV IDs are preferred. Cross-provider aliases are deliberately explicit;
-no fuzzy/name-only mapping is ever published.
+Name-based and cross-provider alias mapping is deliberately prohibited.
 """
 import csv
 import gzip
@@ -29,32 +28,6 @@ SOURCES = [
     ("Smotrim EPG Full", "https://smotrim.uno/epg/epg.xml.gz", True),
     ("IPTV.online EPG", "https://iptv.online/epg/epg.xml.gz", True),
 ]
-
-# Confirmed catalogue-name equivalents. The programme test below is still mandatory.
-ALIASES = {
-    "1HDMusicTelevision.ru@HD": [
-        ("M3U Edit UA1", "1HD.[RU].ua"),
-    ],
-    "BRIDGEDeluxe.ru@SD": [
-        ("M3U Edit UA1", "Bridge.TV.Deluxe.[RU].ua"),
-    ],
-    "DW.de@Russian": [
-        ("M3U Edit UA1", "DW.Russian.[EU].ua"),
-        ("M3U Edit IL1", "DW.רוסית.il"),
-    ],
-    "FONMusic.ru@SD": [
-        ("M3U Edit UA1", "FON.Music.[RU].ua"),
-    ],
-    "NTVMir.ru@SD": [
-        ("M3U Edit IL1", "NTV.MIR.il"),
-    ],
-    "StarCinema.ru@SD": [
-        ("M3U Edit UA1", "Star.Cinema.[UA-RU].ua"),
-    ],
-    "StarFamily.ru@SD": [
-        ("M3U Edit UA1", "Star.Family.Европа.[UA-RU].ua"),
-    ],
-}
 
 def fetch_xml(url, is_gzip):
     req = urllib.request.Request(url, headers={"User-Agent": "Russian-XMLTV-coverage-audit/1.0"})
@@ -153,27 +126,9 @@ def main():
         elif exact_catalogue:
             target_audit[target_id] = f"EXACT_CHANNEL_NO_CURRENT_PROGRAMMES\\t{','.join(exact_catalogue)}"
 
-    # Then test only explicit, reviewed cross-provider aliases.
-    for target_id, candidates in ALIASES.items():
-        if target_id not in unmatched or target_id in selected or target_id in existing_programmes:
-            continue
-        seen_catalogue = []
-        for label, source_id in candidates:
-            if label not in loaded:
-                continue
-            channels, programmes = loaded[label]
-            if source_id in channels:
-                seen_catalogue.append(f"{label}:{source_id}")
-                if programmes.get(source_id):
-                    selected[target_id] = (label, source_id)
-                    target_audit[target_id] = f"ALIAS_PROGRAMMES\\t{label}\\t{source_id}\\t{len(programmes[source_id])}"
-                    break
-        if target_id not in selected and seen_catalogue:
-            target_audit[target_id] = f"ALIAS_CHANNEL_NO_CURRENT_PROGRAMMES\\t{','.join(seen_catalogue)}"
-
     for target_id in sorted(unmatched):
         if target_id not in target_audit:
-            target_audit[target_id] = "NO_EXACT_ID_OR_REVIEWED_ALIAS\\t-"
+            target_audit[target_id] = "NO_EXACT_ID\\t-"
 
 
     added_channels = 0
@@ -193,6 +148,7 @@ def main():
             root.append(new_programme)
             added_programmes += 1
         report.append(f"ADDED\t{target_id}\t{label}\t{source_id}\t{len(programmes[source_id])}")
+        print(f"EXACT ADD: {target_id} | {label} | {source_id} | {len(programmes[source_id])} current programmes")
 
     GUIDE.parent.mkdir(parents=True, exist_ok=True)
     tree.write(GUIDE, encoding="utf-8", xml_declaration=True)
