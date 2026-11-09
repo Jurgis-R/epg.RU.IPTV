@@ -72,6 +72,9 @@ jobs:
           mkdir -p ../public
           npm run grab -- --channels=../channels.xml --output=../public/epg.xml --days=2 --maxConnections=1
 
+      - name: Test public XMLTV feeds and merge verified programme records
+        run: python scripts/merge_external_epg.py
+
       - name: Validate playlist ID matching and programme records
         run: |
           python - <<'PY'
@@ -111,7 +114,7 @@ jobs:
           git -C public init -b data
           git -C public config user.name "github-actions[bot]"
           git -C public config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git -C public add epg.xml epg.xml.gz
+          git -C public add epg.xml epg.xml.gz external-epg-audit.txt
           git -C public commit -m "Update Russian XMLTV guide"
           git -C public remote add origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
           git -C public push --force origin data
