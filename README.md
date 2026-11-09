@@ -32,29 +32,33 @@ Repository files:
 - [additional-ids.txt](./additional-ids.txt) — additional exact IDs beyond the original iptvx catalogue.
 - [epg-url.txt](./epg-url.txt) — primary URL and additional feed candidates.
 
-## Additional feeds requested for comparison
+## Smotrim
 
-### Smotrim
+The two supplied variants are:
+- `https://smotrim.uno/epg/epg.xml`
+- `https://smotrim.uno/epg/epg.xml.gz`
 
-`https://smotrim.uno/epg/epg.xml.gz`
+The uncompressed `.xml` endpoint responded with `text/xml` when opened, but the web reader cannot parse XML payloads. A historical Jellyfin log from August 2024 for the gzip URL listed IDs such as `X2na2`, `Xmir`, and `Xru-tv`. These are not exact matches for target playlist IDs such as `2x2.ru@SD`, `Mir.ru@SD`, and `RUTV.ru@SD`. These examples are not an exhaustive current channel list.
 
-The endpoint returned a gzip response during checking. A public Jellyfin log from August 2024 shows this URL being loaded as XMLTV and lists channel IDs such as `X2na2`, `Xmir`, and `Xru-tv`. Those IDs differ from the target playlist's IDs (for example, `2x2.ru@SD`, `Mir.ru@SD`, and `RUTV.ru@SD`). This indicates name-level channel candidates, not exact ID matches. The available log is historical and does not establish the current feed's complete channel list or current schedule freshness.
+Therefore no exact Smotrim coverage count is claimed, and no speculative mappings were added to `channels.xml`.
 
-The gzip XML itself could not be downloaded and parsed in this environment. Therefore no exhaustive Smotrim ID coverage count is claimed, and no speculative mappings were added to `channels.xml`.
+## EPG.ONE / former EPG it999
 
-### EPG.ONE / former EPG it999
+The supplied old address:
+`http://epg.it999.ru/edem.xml`
 
-The provider's own page says EPG.ONE is the new domain for EPG it999 and that the old it999 domain was scheduled to be disabled after 15 May 2024. The old URL supplied for checking is therefore legacy:
+redirects to:
+`http://epg.one/edem.xml`
 
-`http://epg.it999.ru/edem.xml.gz`
+EPG.ONE's own page identifies it as the new domain for EPG it999 and says old it999-domain links were scheduled to be disabled after 15 May 2024. It lists the following formats:
+- `http://epg.one/edem.xml` — simplified, uncompressed XMLTV for the current day; programme title only, no description.
+- `http://epg.one/edem.xml.gz` — compressed Edem feed.
+- `https://epg.one/ru2.xml.gz` and `https://epg.one/ru.xml.gz` — Russian-language channel packs.
+- `https://epg.one/epg.xml.gz` — full channel pack.
 
-Use the current EPG.ONE domain instead:
-- `http://epg.one/edem.xml.gz` — replacement for the old Edem endpoint, as listed by a recent IPTV guide.
-- `https://epg.one/ru2.xml.gz` — Russian-language XMLTV feed.
-- `https://epg.one/ru.xml.gz` — Russian-language XMLTV feed.
-- `https://epg.one/epg.xml.gz` — full XMLTV feed.
+EPG.ONE describes its full guide as using multiple programme sources and covering about a week forward and backward. Its own site also states that it uses fallback sources when a programme is missing from one source.
 
-EPG.ONE describes its guide as combining multiple programme sources and offering about a week of guide data. Its own site lists the Russian-only feeds. However, the feed payload was not parsed here, so exact `tvg-id` overlap with the 653 playlist entries remains unverified.
+The exact XMLTV IDs in these feeds have not been extracted and cross-matched against all 653 target playlist IDs here. Do not treat the provider's claim of broad coverage as proof that every playlist ID matches.
 
 ## Other public Russian EPG candidates
 
@@ -62,7 +66,7 @@ EPG.ONE describes its guide as combining multiple programme sources and offering
 - TeleGuide: `https://www.teleguide.info/download/new3/xmltv.xml.gz`
 - IptvX full guide: `https://iptvx.one/epg/epg.xml.gz`
 
-These are candidate alternatives, not merged into the primary feed. Their exact `tvg-id` coverage against this playlist has not been established here.
+Their exact `tvg-id` coverage against this playlist has not been established here.
 
 ## Upstream catalogues
 
