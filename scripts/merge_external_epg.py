@@ -132,26 +132,46 @@ def main():
             print(f"SOURCE UNAVAILABLE: {label}: {type(exc).__name__}: {exc}")
             report.append(f"SOURCE_UNAVAILABLE\t{label}\t{type(exc).__name__}: {exc}")
 
-    # First pass: exact ID matches only, from every successfully fetched source.
+    # Audit every unmatched target against every fetched feed. Exact IDs first.
     selected = {}
-    for label, (channels, programmes) in loaded.items():
-        for target_id in sorted(unmatched):
-            if target_id in selected or target_id in existing_programmes:
-                continue
-            if target_id in channels and programmes.get(target_id):
-                selected[target_id] = (label, target_id)
+    target_audit = {}
+    for target_id in sorted(unmatched):
+        exact_catalogue = []
+        exact_with_programmes = []
+        for label, (channels, programmes) in loaded.items():
+            if target_id in channels:
+                exact_catalogue.append(label)
+                if programmes.get(target_id):
+                    exact_with_programmes.append(label)
+        if exact_with_programmes and target_id not in existing_programmes:
+            label = exact_with_programmes[0]
+            selected[target_id] = (label, target_id)
+            target_audit[target_id] = f"EXACT_PROGRAMMES\\t{label}\\t{len(loaded[label][1][target_id])}"
+        elif exact_catalogue:
+            target_audit[target_id] = f"EXACT_CHANNEL_NO_CURRENT_PROGRAMMES\\t{','.join(exact_catalogue)}"
 
-    # Second pass: explicit, reviewed aliases; source channel and programme must exist.
+    # Then test only explicit, reviewed cross-provider aliases.
     for target_id, candidates in ALIASES.items():
         if target_id not in unmatched or target_id in selected or target_id in existing_programmes:
             continue
+        seen_catalogue = []
         for label, source_id in candidates:
             if label not in loaded:
                 continue
             channels, programmes = loaded[label]
-            if source_id in channels and programmes.get(source_id):
-                selected[target_id] = (label, source_id)
-                break
+            if source_id in channels:
+                seen_catalogue.append(f"{label}:{source_id}")
+                if programmes.get(source_id):
+                    selected[target_id] = (label, source_id)
+                    target_audit[target_id] = f"ALIAS_PROGRAMMES\\t{label}\\t{source_id}\\t{len(programmes[source_id])}"
+                    break
+        if target_id not in selected and seen_catalogue:
+            target_audit[target_id] = f"ALIAS_CHANNEL_NO_CURRENT_PROGRAMMES\\t{','.join(seen_catalogue)}"
+
+    for target_id in sorted(unmatched):
+        if target_id not in target_audit:
+            target_audit[target_id] = "NO_EXACT_ID_OR_REVIEWED_ALIAS\\t-"
+
 
     added_channels = 0
     added_programmes = 0
