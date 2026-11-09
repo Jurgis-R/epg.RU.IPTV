@@ -1,0 +1,81 @@
+name: Build Russian XMLTV
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 */12 * * *"
+  push:
+    paths:
+      - "channels.xml"
+      - ".github/workflows/build-epg.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Get the official EPG grabber
+        run: git clone --depth 1 https://github.com/iptv-org/epg.git epg-engine
+
+      - name: Install grabber dependencies
+        working-directory: epg-engine
+        run: npm ci
+
+      - name: Generate XMLTV from mapped sources
+        working-directory: epg-engine
+        run: |
+          mkdir -p ../public
+          npm run grab -- --channels=../channels.xml --output=../public/epg.xml --days=2 --maxConnections=1
+
+      - name: Validate playlist ID matching and programme records
+        run: |
+          python - <<'PY'
+          import re
+          import xml.etree.ElementTree as ET
+          from pathlib import Path
+          from urllib.request import urlopen
+
+          guide = ET.parse("public/epg.xml").getroot()
+          guide_ids = {node.get("id") for node in guide.findall("channel") if node.get("id")}
+          programmes = guide.findall("programme")
+          programme_ids = {node.get("channel") for node in programmes if node.get("channel")}
+
+          with urlopen("https://iptv-org.github.io/iptv/languages/rus.m3u", timeout=60) as response:
+              playlist = response.read().decode("utf-8", errors="replace")
+
+          playlist_ids = set(re.findall(r'tvg-id="([^"]+)"', playlist))
+          matched = playlist_ids & guide_ids
+          with_programmes = playlist_ids & programme_ids
+
+          print(f"Playlist tvg-id values: {len(playlist_ids)}")
+          print(f"XMLTV channel IDs: {len(guide_ids)}")
+          print(f"Exact playlist/XMLTV matches: {len(matched)}")
+          print(f"Matched channels with programmes: {len(with_programmes)}")
+          print(f"Programme records: {len(programmes)}")
+
+          if len(playlist_ids) == 0 or len(matched) < 20 or len(with_programmes) < 10 or len(programmes) < 50:
+              raise SystemExit("Validation failed: refusing to publish an empty or badly mismatched EPG.")
+          PY
+
+      - name: Compress guide
+        run: gzip -9 -k public/epg.xml
+
+      - name: Publish guide to data branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: data
+          publish_dir: ./public
+          force_orphan: true
+          commit_message: "Update Russian XMLTV guide"
