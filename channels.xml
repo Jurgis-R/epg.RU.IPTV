@@ -503,8 +503,7 @@
   <channel site="magticom.ge" site_id="220" lang="ru" xmltv_id="PeretzInternational.ru@SD">Перец</channel>
   <channel site="magticom.ge" site_id="258" lang="ru" xmltv_id="Nauka.ru@SD">Наука 2.0</channel>
   <channel site="horizon.tv" site_id="10190" lang="en" xmltv_id="FREEDOM.ua@SD">UATV</channel>
-</channels>
-
   <channel site="programetv.ro" site_id="love-nature" lang="ro" xmltv_id="LoveNature.ca@SD">Love Nature</channel>
   <channel site="musor.tv" site_id="LOVE_NATURE" lang="hu" xmltv_id="LoveNature.ca@SD">Love Nature (HD / 4K)</channel>
   <channel site="tvplus.com.tr" site_id="45" lang="tr" xmltv_id="LoveNature.ca@SD">LOVE NATURE</channel>
+</channels>
