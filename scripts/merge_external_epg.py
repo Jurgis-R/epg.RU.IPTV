@@ -57,7 +57,7 @@ def fetch_xml(url, is_gzip):
     req = urllib.request.Request(url, headers={"User-Agent": "Russian-XMLTV-coverage-audit/1.0"})
     with urllib.request.urlopen(req, timeout=90) as response:
         raw = response.read()
-    if is_gzip or raw[:2] == b"\\x1f\\x8b":
+    if is_gzip:
         raw = gzip.decompress(raw)
     return ET.fromstring(raw)
 
