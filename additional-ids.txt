@@ -86,3 +86,21 @@ Vmirezhivotnykh.ru@SD	V mire zhivotnykh (1080p)	tv.mail.ru
 vijuPlusSport.ru@HD	viju+ Sport HD (1080p)	tv.mail.ru
 Zhivayapriroda.ru@HD	Zhivaya priroda HD (1080p)	tv.mail.ru
 Zhivi.ru@SD	Zhivi! (1080p)	tv.mail.ru
+DiscoveryChannel.ru@SD	Discovery Channel	teliatv.ee
+AnimalPlanet.ru@SD	Animal Planet	teliatv.ee
+InvestigationDiscovery.ru@SD	ID	teliatv.ee
+Eurosport1.fr@Russia	Eurosport	teliatv.ee
+Eurosport2.fr@Russia	Eurosport 2	teliatv.ee
+CartoonitoCEE.uk@SD	Cartoonito	teliatv.ee
+Nickelodeon.ru@SD	Nickelodeon	teliatv.ee
+Fox.ru@SD	Fox	teliatv.ee
+FoxLife.ru@SD	Fox Life	teliatv.ee
+LifeTV.ee@SD	LIFE TV	teliatv.ee
+TBNBaltia.ee@SD	TBN Baltia	teliatv.ee
+TLC.ru@SD	TLC	teliatv.ee
+ETVPlus.ee@SD	ETV+	teliatv.ee
+EuronewsRussian.fr@SD	Euronews Rus	teliatv.ee
+STSInternational.ru@SD	CTC	magticom.ge
+NickJr.ru@SD	Nick Jr.	magticom.ge
+PeretzInternational.ru@SD	Перец	magticom.ge
+Nauka.ru@SD	Наука 2.0	magticom.ge
