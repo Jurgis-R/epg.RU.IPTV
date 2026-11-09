@@ -9,6 +9,7 @@ import gzip
 import io
 import re
 import sys
+from datetime import datetime, timedelta, timezone
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import defaultdict
@@ -63,6 +64,28 @@ def fetch_xml(url, is_gzip):
 def clean_tag(element):
     return element.tag.rsplit("}", 1)[-1]
 
+def in_active_window(programme, now):
+    # XMLTV timestamps are YYYYMMDDhhmmss [+-]ZZZZ. Treat absent offsets as UTC.
+    def parse(value):
+        if not value:
+            return None
+        match = re.match(r"^(\d{14})(?:\s+([+-]\d{4}))?", value)
+        if not match:
+            return None
+        dt = datetime.strptime(match.group(1), "%Y%m%d%H%M%S")
+        offset = match.group(2)
+        if offset:
+            sign = 1 if offset[0] == "+" else -1
+            minutes = sign * (int(offset[1:3]) * 60 + int(offset[3:5]))
+            dt = dt.replace(tzinfo=timezone(timedelta(minutes=minutes)))
+        else:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+
+    start = parse(programme.get("start"))
+    stop = parse(programme.get("stop"))
+    return bool(start and stop and start < now + timedelta(hours=48) and stop > now - timedelta(hours=3))
+
 def parse_source(label, url, is_gzip):
     root = fetch_xml(url, is_gzip)
     channels = {
@@ -71,8 +94,9 @@ def parse_source(label, url, is_gzip):
         if clean_tag(node) == "channel" and node.get("id")
     }
     programmes = defaultdict(list)
+    now = datetime.now(timezone.utc)
     for node in root:
-        if clean_tag(node) == "programme" and node.get("channel"):
+        if clean_tag(node) == "programme" and node.get("channel") and in_active_window(node, now):
             programmes[node.get("channel")].append(node)
     return channels, programmes
 
