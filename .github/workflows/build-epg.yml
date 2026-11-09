@@ -44,18 +44,25 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           path = Path("sites/tv.mail.ru/tv.mail.ru.config.js")
-          source = path.read_text()
-          request_old = "  request: {\\n    cache: {"
-          request_new = "  request: {\\n    method: 'POST',\\n    cache: {"
-          fetch_old = "await axios[m](url, { headers })"
-          fetch_new = "await axios.post(url, {}, { headers })"
-          if request_old not in source:
+          lines = path.read_text().splitlines()
+          try:
+              request_index = lines.index("  request: {")
+          except ValueError:
               raise SystemExit("Mail.ru request block changed; refusing an unverified patch")
-          if fetch_old not in source:
+          if lines[request_index + 1].strip() != "cache: {":
+              raise SystemExit("Mail.ru request block changed; refusing an unverified patch")
+          lines.insert(request_index + 1, "    method: 'POST',")
+          fetch_index = next(
+              (i for i, line in enumerate(lines) if "await axios[m](url, { headers })" in line),
+              None
+          )
+          if fetch_index is None:
               raise SystemExit("Mail.ru URL probe changed; refusing an unverified patch")
-          source = source.replace(request_old, request_new, 1)
-          source = source.replace(fetch_old, fetch_new, 1)
-          path.write_text(source)
+          lines[fetch_index] = lines[fetch_index].replace(
+              "await axios[m](url, { headers })",
+              "await axios.post(url, {}, { headers })"
+          )
+          path.write_text("\n".join(lines) + "\n")
           print("Mail.ru scraper patched: POST request + POST URL probe")
           PY
 
