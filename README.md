@@ -41,7 +41,7 @@ The playlist snapshot used for the original comparison had 653 entries and 653 u
 | magticom.ge (Russian channels) | 43 |
 | **Unique IDs across all seven** | **337 / 653** |
 
-The combined map adds **106 IDs** beyond the original IptvX-only map. **316 IDs** had no exact match in those five catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **106 IDs** beyond the original IptvX-only map. **316 IDs** had no exact match in those seven catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
 
 ## Repository files
 
