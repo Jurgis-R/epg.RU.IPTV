@@ -27,6 +27,7 @@ SOURCES = [
     ("IPTV-EPG Israel", "https://iptv-epg.org/files/epg-il.xml", False),
     ("Smotrim EPG Lite", "https://smotrim.uno/epg/epg-lite.xml.gz", True),
     ("Smotrim EPG Full", "https://smotrim.uno/epg/epg.xml.gz", True),
+    ("IPTV.online EPG", "https://iptv.online/epg/epg.xml.gz", True),
 ]
 
 # Confirmed catalogue-name equivalents. The programme test below is still mandatory.
