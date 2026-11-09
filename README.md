@@ -28,20 +28,21 @@ The guide is not a static channel list: it contains actual `<channel>` and `<pro
 
 ## Exact channel-ID cross-check
 
-The playlist snapshot used for the original comparison had 653 entries and 653 unique `tvg-id` values. These were compared against seven upstream channel catalogues:
+The playlist snapshot used for this comparison had 653 entries and 653 unique `tvg-id` values. These were compared against eight upstream channel catalogues:
 
-| Source catalogue | Exact IDs found |
+| Source catalogue | Exact playlist IDs mapped |
 |---|---:|
 | epg.iptvx.one | 231 |
 | tv.mail.ru | 229 |
 | ctc.ru | 1 |
 | galamtv.kz | 11 |
 | cgates.lt | 4 |
-| teliatv.ee (Russian feed) | 21 |
-| magticom.ge (Russian channels) | 43 |
-| **Unique IDs across all seven** | **337 / 653** |
+| teliatv.ee (Russian feed) | 14 |
+| magticom.ge (Russian channels) | 4 |
+| horizon.tv (Slovakia) | 1 |
+| **Unique IDs across all eight** | **338 / 653** |
 
-The combined map adds **106 IDs** beyond the original IptvX-only map. **316 IDs** had no exact match in those seven catalogues at the time of the comparison. These are catalogue matches, not a guarantee that every matched channel currently has programme data.
+The combined map adds **107 IDs** beyond the original IptvX-only map. **315 IDs** had no exact match in those eight catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
 
 ## Repository files
 
@@ -67,3 +68,4 @@ EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its g
 - [CGates scraper](https://github.com/iptv-org/epg/tree/master/sites/cgates.lt)
 - [Telia TV Estonia Russian feed](https://github.com/iptv-org/epg/tree/master/sites/teliatv.ee)
 - [Magticom Georgia](https://github.com/iptv-org/epg/tree/master/sites/magticom.ge)
+- [Horizon TV Slovakia](https://github.com/iptv-org/epg/tree/master/sites/horizon.tv)
