@@ -15,7 +15,6 @@ BRIDGEHits.ru@SD	BRIDGE Hits (576p)	tv.mail.ru
 BRIDGERock.ru@SD	BRIDGE Rock (576p)	tv.mail.ru
 CartoonitoCEE.uk@SD	Cartoonito CEE	teliatv.ee
 CGTNRussian.cn@SD	CGTN Russian (1080p)	tv.mail.ru
-Channel9.il@SD	Channel 9 (Israel) (1080p)	9tv.co.il
 ChannelOne.ru@HD	Channel One (Russia) HD (720p)	tv.mail.ru
 Che.ru@SD	Che! (576p)	tv.mail.ru
 CurrentTimeTV.cz@SD	Current Time TV (1080p)	cgates.lt
@@ -78,6 +77,7 @@ Priklyucheniya.ru@HD	Priklyucheniya HD (1080p)	tv.mail.ru
 RBKTV.ru@SD	RBK-TV (576p)	tv.mail.ru
 RTDocumentary.ru@Russian	RT Documentary Russian (1080p)	tv.mail.ru
 RTGTV.ru@HD	RTG TV HD (1080p)	tv.mail.ru
+RTRPlaneta.ru@Europe	RTR-Planeta Europe (720p) [Geo-blocked]	tv.blue.ch
 Russia1.ru@SD	Russia-1 (1080p)	tv.mail.ru
 Russia1.ru@HD	Russia-1 HD (1080p)	tv.mail.ru
 Russia24.ru@SD	Russia-24 (1080p)	tv.mail.ru
