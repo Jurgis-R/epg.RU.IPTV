@@ -4,6 +4,7 @@ AlmatyTV.kz@SD	Almaty TV (576p)	galamtv.kz
 AmediaHit.ru@SD	Amedia Hit (1080p)	tv.mail.ru
 AmediaPremium.ru@SD	Amedia Premium (720p)	tv.mail.ru
 AngelTV.in@Russian	Angel TV Russian (720p)	tv.mail.ru
+AnimalPlanet.ru@SD	Animal Planet (Russia) (1080p)	teliatv.ee
 Belarus24.by@SD	Belarus-24 (576p)	tv.mail.ru
 Blokbaster.ru@HD	Blokbaster HD (1080p)	tv.mail.ru
 Bollywood.ru@HD	Bollywood HD (576p)	tv.mail.ru
@@ -12,7 +13,9 @@ BRIDGEClassic.ru@SD	BRIDGE Classic (576p)	tv.mail.ru
 BRIDGEDeluxe.ru@HD	BRIDGE Deluxe HD (576p)	tv.mail.ru
 BRIDGEHits.ru@SD	BRIDGE Hits (576p)	tv.mail.ru
 BRIDGERock.ru@SD	BRIDGE Rock (576p)	tv.mail.ru
+CartoonitoCEE.uk@SD	Cartoonito CEE	teliatv.ee
 CGTNRussian.cn@SD	CGTN Russian (1080p)	tv.mail.ru
+Channel9.il@SD	Channel 9 (Israel) (1080p)	9tv.co.il
 ChannelOne.ru@HD	Channel One (Russia) HD (720p)	tv.mail.ru
 Che.ru@SD	Che! (576p)	tv.mail.ru
 CurrentTimeTV.cz@SD	Current Time TV (1080p)	cgates.lt
@@ -20,30 +23,40 @@ DaVinci.ru@SD	Da Vinci (576p)	tv.mail.ru
 Dikayaokhota.ru@HD	Dikaya okhota HD (1080p)	tv.mail.ru
 Dikayarybalka.ru@HD	Dikaya rybalka HD (1080p)	tv.mail.ru
 Dikij.ru@SD	Dikij (576p)	tv.mail.ru
+DiscoveryChannel.ru@SD	Discovery Channel (Russia) (1080p)	teliatv.ee
 DomkinoPremium.ru@HD	Dom kino Premium HD (1080p)	tv.mail.ru
-Dorama.ru@HD	Dorama HD (1080p)	tv.mail.ru
+Dorama.ru@HD	like Gecko) Chrome/149.0.0.0 Safari/537.36" group-title="Movies",Dorama HD (1080p)	tv.mail.ru
 DumaTV.ru@SD	Duma TV (720p)	tv.mail.ru
+ETVPlus.ee@SD	ETV+ (720p)	teliatv.ee
+EuronewsRussian.fr@SD	Euronews Russian (720p)	teliatv.ee
 EuropaPlusTV.ru@SD	Europa Plus TV (1080p)	tv.mail.ru
+Eurosport1.fr@Russia	Eurosport 1 Russia (1080p)	teliatv.ee
+Eurosport2.fr@Russia	Eurosport 2 Russia (1080p)	teliatv.ee
 Evrokino.ru@HD	Evrokino HD (1080p)	tv.mail.ru
 ExtremeSportsChannel.ru@SD	Extreme Sports Channel (576p)	tv.mail.ru
 FAN.ru@SD	FAN (1080p)	tv.mail.ru
 FeniksplusKino.ru@SD	Feniks plus Kino (576p)	tv.mail.ru
-FilmUADrama.ua@SD	FilmUADrama (1080p)	cgates.lt
+FilmUADrama.ua@SD	FilmUADrama	cgates.lt
+Fox.ru@SD	Fox (Russia) (576p)	teliatv.ee
+FoxLife.ru@SD	Fox Life (576p)	teliatv.ee
+FREEDOM.ua@SD	FREEDOM (1080p)	horizon.tv
 GulliGirl.ru@SD	Gulli Girl (720p)	tv.mail.ru
 Hit.ru@HD	Hit HD (1080p)	tv.mail.ru
 IllusionPlus.ru@SD	Illusion+ (576p)	tv.mail.ru
+InvestigationDiscovery.ru@SD	Investigation Discovery (Russia) (1080p)	teliatv.ee
 JibekJoly.kz@SD	Jibek Joly (576p)	galamtv.kz
 KHL.ru@SD	KHL (720p)	tv.mail.ru
 KinoTV.ru@SD	Kino TV (720p)	tv.mail.ru
 KinoTV.ru@HD	Kino TV HD (1080p)	tv.mail.ru
 Kinopokaz.ru@SD	Kinopokaz (576p)	tv.mail.ru
-Kinopremyera.ru@HD	Kinopremyera HD (1080p)	tv.mail.ru
+Kinopremyera.ru@HD	Kinopremyera (1080p)	tv.mail.ru
 Komedia.ru@SD	Komedia (576p)	tv.mail.ru
 Komediynoe.ru@HD	Komediynoe HD (1080p)	tv.mail.ru
 KTK.kz@SD	KTK (576p)	galamtv.kz
-LuxeTV.lu@SD	Luxe TV (1080p)	tv.mail.ru
+LifeTV.ee@SD	Life TV (Estonia) (432p) [Not 24/7]	teliatv.ee
 LoveNature.ca@SD	Love Nature (1080p)	programetv.ro
-Mir.ru@SD	Mir (720p)	tv.mail.ru, galamtv.kz
+LuxeTV.lu@SD	Luxe TV (1080p)	tv.mail.ru
+Mir.ru@SD	like Gecko) Chrome/144.0.0.0 Safari/537.36" group-title="General",Mir (720p)	tv.mail.ru, galamtv.kz
 MosfilmGoldCollection.ru@SD	Mosfilm Gold Collection (576p)	tv.mail.ru
 Moskva24.ru@SD	Moskva 24 (1080p)	tv.mail.ru
 MoskvaDoveriye.ru@SD	Moskva. Doveriye (576p)	tv.mail.ru
@@ -52,10 +65,14 @@ MyZenTV.fr@SD	MyZen TV (1080p)	tv.mail.ru
 Nano.ru@HD	Nano HD (1080p)	tv.mail.ru
 NashKinopokaz.ru@HD	Nash Kinopokaz HD (576p)	tv.mail.ru
 Nashemuzhskoe.ru@HD	Nashe muzhskoe HD (1080p)	tv.mail.ru
+Nauka.ru@SD	Nauka (Russia) (1080p)	magticom.ge
+NickJr.ru@SD	Nick Jr. (Russia) (576p)	magticom.ge
+Nickelodeon.ru@SD	Nickelodeon (Russia) (576p)	teliatv.ee
 NTV.ru@HD	NTV (Russia) HD (1080p)	tv.mail.ru
 Ohotnikirybolov.ru@HD	Ohotnik i rybolov HD (1080p)	tv.mail.ru
 Ostrosyuzhetnoye.ru@HD	Ostrosyuzhetnoye HD (1080p)	tv.mail.ru
 OTR.ru@SD	OTR (576p)	tv.mail.ru
+PeretzInternational.ru@SD	Peretz International (576p)	magticom.ge
 Premialnoe.ru@HD	Premialnoe HD (1080p)	tv.mail.ru
 Priklyucheniya.ru@HD	Priklyucheniya HD (1080p)	tv.mail.ru
 RBKTV.ru@SD	RBK-TV (576p)	tv.mail.ru
@@ -70,12 +87,14 @@ ShansonTV.ru@SD	Shanson TV SD (576p)	tv.mail.ru
 Shokiruyushchee.ru@HD	Shokiruyushchee HD (1080p)	tv.mail.ru
 Solnce.ru@SD	Solnce (576p)	tv.mail.ru
 SONGTVRussia.ru@SD	SONGTV Russia	tv.mail.ru
-StarCinema.ru@SD	Star Cinema	tv.mail.ru
+StarCinema.ru@SD	Star Cinema (576p)	tv.mail.ru
 StarFamily.ru@SD	Star Family (1080p)	tv.mail.ru, cgates.lt
 STSkids.ru@SD	STS kids (1080p)	tv.mail.ru
+TBNBaltia.ee@SD	TBN Baltia (1080p)	teliatv.ee
 TDK42.kz@SD	TDK 42	galamtv.kz
 Teleputeshestviya.ru@SD	Teleputeshestviya (576p)	tv.mail.ru
-TERRA.ru@SD	TERRA (720p)	tv.mail.ru
+TERRA.ru@SD	TERRA (1080p)	tv.mail.ru
+TLC.ru@SD	TLC (Russia) (1080p)	teliatv.ee
 TNT.ru@HD	TNT (Russia) HD (1080p)	tv.mail.ru
 TNVTatarstan.ru@SD	TNV-Tatarstan (720p)	tv.mail.ru
 TochkaTV.ru@SD	Tochka TV (576p)	tv.mail.ru
@@ -87,22 +106,3 @@ Vmirezhivotnykh.ru@SD	V mire zhivotnykh (1080p)	tv.mail.ru
 vijuPlusSport.ru@HD	viju+ Sport HD (1080p)	tv.mail.ru
 Zhivayapriroda.ru@HD	Zhivaya priroda HD (1080p)	tv.mail.ru
 Zhivi.ru@SD	Zhivi! (1080p)	tv.mail.ru
-DiscoveryChannel.ru@SD	Discovery Channel	teliatv.ee
-AnimalPlanet.ru@SD	Animal Planet	teliatv.ee
-InvestigationDiscovery.ru@SD	ID	teliatv.ee
-Eurosport1.fr@Russia	Eurosport	teliatv.ee
-Eurosport2.fr@Russia	Eurosport 2	teliatv.ee
-CartoonitoCEE.uk@SD	Cartoonito	teliatv.ee
-Nickelodeon.ru@SD	Nickelodeon	teliatv.ee
-Fox.ru@SD	Fox	teliatv.ee
-FoxLife.ru@SD	Fox Life	teliatv.ee
-LifeTV.ee@SD	LIFE TV	teliatv.ee
-TBNBaltia.ee@SD	TBN Baltia	teliatv.ee
-TLC.ru@SD	TLC	teliatv.ee
-ETVPlus.ee@SD	ETV+	teliatv.ee
-EuronewsRussian.fr@SD	Euronews Rus	teliatv.ee
-STSInternational.ru@SD	CTC	magticom.ge
-NickJr.ru@SD	Nick Jr.	magticom.ge
-PeretzInternational.ru@SD	Перец	magticom.ge
-Nauka.ru@SD	Наука 2.0	magticom.ge
-FREEDOM.ua@SD	FREEDOM (1080p)	horizon.tv
