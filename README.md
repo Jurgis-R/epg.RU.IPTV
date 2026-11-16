@@ -41,7 +41,7 @@ The playlist snapshot used for this comparison had 647 entries and 647 unique `t
 | magticom.ge (Russian channels) | 3 |
 | horizon.tv (Slovakia) | 1 |
 | programetv.ro | 1 |
-| 9tv.co.il (Israel) | 1 |
+| tv.blue.ch (Switzerland) | 1 |
 | **Unique IDs across all ten** | **337 / 647** |
 
 The combined map adds **108 IDs** beyond the original IptvX-only map. **310 IDs** had no exact match in those ten catalogues at the time of the comparison. Counts above are exact playlist-ID matches; successful programme retrieval is verified separately by the build and published guide.
@@ -72,4 +72,4 @@ EPG.ONE publicly lists full and Russian-language XMLTV feeds and describes its g
 - [Magticom Georgia](https://github.com/iptv-org/epg/tree/master/sites/magticom.ge)
 - [Horizon TV Slovakia](https://github.com/iptv-org/epg/tree/master/sites/horizon.tv)
 - [Programetv Romania](https://github.com/iptv-org/epg/tree/master/sites/programetv.ro)
-- [9tv.co.il (Israel)](https://github.com/iptv-org/epg/tree/master/sites/9tv.co.il) — Russian-language Channel 9
+- [Swisscom blue TV](https://github.com/iptv-org/epg/tree/master/sites/tv.blue.ch) — RTR Planeta Europe
