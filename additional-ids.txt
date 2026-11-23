@@ -106,3 +106,4 @@ Vmirezhivotnykh.ru@SD	V mire zhivotnykh (1080p)	tv.mail.ru
 vijuPlusSport.ru@HD	viju+ Sport HD (1080p)	tv.mail.ru
 Zhivayapriroda.ru@HD	Zhivaya priroda HD (1080p)	tv.mail.ru
 Zhivi.ru@SD	Zhivi! (1080p)	tv.mail.ru
+Channel9.il@SD	Channel 9 (Israel) (1080p)	9tv.co.il
