@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Exact tvg-id cross-match against iptv-org/languages/rus.m3u.
-  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge, horizon.tv, programetv.ro, tv.blue.ch.
-  337 unique playlist IDs matched out of 647; 310 unmatched in the 2026-11-16 snapshot.
+  Source catalogues: epg.iptvx.one, tv.mail.ru, ctc.ru, galamtv.kz, cgates.lt, teliatv.ee, magticom.ge, horizon.tv, programetv.ro, tv.blue.ch, 9tv.co.il.
+  338 unique playlist IDs matched out of 657; 319 unmatched in the 2026-11-23 snapshot.
   Repeated xmltv_id values from different source sites are intentional alternatives.
 -->
 <channels>
@@ -505,4 +505,5 @@
   <channel site="horizon.tv" site_id="10190" lang="en" xmltv_id="FREEDOM.ua@SD">UATV</channel>
   <channel site="programetv.ro" site_id="love-nature" lang="ro" xmltv_id="LoveNature.ca@SD">Love Nature</channel>
   <channel site="tv.blue.ch" site_id="366" lang="en" xmltv_id="RTRPlaneta.ru@Europe">RTR Planeta</channel>
+  <channel site="9tv.co.il" site_id="#" lang="ru" xmltv_id="Channel9.il@SD">9 канал</channel>
 </channels>
